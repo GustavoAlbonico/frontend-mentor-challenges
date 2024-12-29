@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+    background-color: #ecf2f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container{
+    display: grid;
+    max-width: 85%;
+    grid-template-areas: 
+    "a a a a b e "
+    "c d d d d e ";
+    gap: 2rem;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: 2rem 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.post img {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
+.post h2 {
+    font-weight: 600;
+    font-size: 23px;
+}
+
+.post blockquote {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.post .perfil {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.perfil .perfil-info h3{
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.perfil .perfil-info span {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+
+
+.daniel {
+    grid-area: a;
+    background-color: #7541c8;
+    background-image: url('../images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-size: 120px;
+    background-position-y: top;
+    background-position-x: 80%;
+}
+
+.daniel .perfil img {
+    outline: 2px solid #a985e4;
+}
+
+.jonathan {
+    grid-area: b;
+    background-color: #48556a;
+}
+
+.jeanette {
+    grid-area: c;
+    background-color: #fff;
+}
+
+.patrick {
+    grid-area: d;
+    background-color: #19212e;
+}
+
+.patrick .perfil img {
+    outline: 2px solid #7541c8;
+}
+
+.kira {
+    grid-area: e;
+    background-color: #fff;
+}
+
+.daniel,
+.jonathan,
+.patrick{
+    color: #fff
+}
+
+.daniel .perfil .perfil-info span,
+.jonathan .perfil .perfil-info span,
+.patrick .perfil .perfil-info span{
+    color: #fff;
+    opacity: 50%;
+}
+
+.daniel blockquote,
+.jonathan blockquote,
+.patrick blockquote{
+    color: #fff;
+    opacity: 70%;
+}
+
+.jeanette,
+.kira {
+    color: rgba(25, 33, 46, 0.8);
+}
+
+.jeanette .perfil .perfil-info span,
+.kira .perfil .perfil-info span {
+    opacity: 50%;
+}
+
+.jeanette blockquote,
+.kira blockquote{
+    opacity: 70%;
+}
+
+@media (max-width:1025px){
+    .container{
+        grid-template-areas: 
+        "a a"
+        "b c"
+        "d d"
+        "e e";
+    }
+}
+
+@media (max-width:769px){
+    .container{
+        grid-template-areas: 
+        "a"
+        "a"
+        "b"
+        "c"
+        "d"
+        "d"
+        "e"
+        "e";
+    }
+}
+
+@media (max-width:321px){
+    .container {
+        max-width: 95%;
+        gap: 1rem;
+    }
+
+    .post {
+        padding: 1.5rem 1.5rem 2rem;
+    }
+}
+

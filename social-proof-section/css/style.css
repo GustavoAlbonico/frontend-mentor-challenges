@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/bg-pattern-top-desktop.svg"),
+                    url("../images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: left top, right top;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 80%;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.sub-container {
+  display: flex;
+  gap: 10rem;
+}
+
+.info {
+  flex: 1 1 0;
+}
+
+.info h1 {
+  color: hsl(300, 43%, 22%);
+  font-size: 60px;
+  letter-spacing: -2px;
+}
+
+.info p {
+  color: hsl(303, 10%, 53%);
+  font-size: 19px;
+  text-shadow: 0px 0px 1px hsl(303, 10%, 53%);
+  margin: 1rem 0;
+  line-height: 1.5rem;
+  
+}
+
+.card-note-section {
+  flex: 1.2 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#card-note-container-one {
+ align-self: start;
+}
+
+#card-note-container-two {
+ align-self: center;
+}
+
+#card-note-container-three {
+  align-self: end;
+}
+
+.card-note {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 20px 45px 20px 30px;
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 0.5rem;
+  min-width: 430px;
+}
+
+.card-note h3 {
+  color: hsl(300, 43%, 22%);
+  font-size: 18px;
+}
+
+.list-stars {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cards-comment-section {
+  display: flex;
+  gap: 2rem;
+}
+
+.card-comment-container{
+  display: flex;
+  height: 260px;
+}
+
+#card-comment-three{
+    align-self: end;
+}
+
+#card-comment-two {
+    align-self: center;
+}
+
+.card-comment {
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 0.5rem;
+  padding: 2.5rem 2rem;
+  max-width: 365px;
+  max-height: 240px;
+}
+
+.card-comment header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.card-comment blockquote{
+  font-size: 17px;
+  margin-top: 30px;
+  line-height: 23px;
+}
+
+.card-comment header img {
+  width: 40px;
+  border-radius: 2rem;
+}
+
+.title-card h2 ,
+.card-comment blockquote{
+  color: #fff;
+}
+
+.title-card h2{
+  margin-bottom: 2px;
+}
+
+.title-card h2,
+.title-card mark{
+  font-size: 17px;
+}
+
+.title-card mark {
+  background-color: transparent;
+  color: hsl(333, 80%, 67%);
+}
+
+
+
+@media (max-width: 375px){
+  
+  main {
+    background-image: url("../images/bg-pattern-top-mobile.svg"),
+                      url("../images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;
+  }
+
+  .container {
+    max-width: 85%;
+    margin: 6rem 0;
+  }
+
+  .sub-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 0;
+  }
+
+  .info h1,
+  .info p {
+    text-align: center;
+  }
+
+  .info h1 {
+    font-size: 45px;
+  }
+  
+  .info p {
+    font-size: 18px;
+    line-height: 1.5rem;
+  }
+
+  #card-note-container-one, 
+  #card-note-container-two,
+  #card-note-container-three {
+    align-self: center;
+    min-width: 100%;
+  }
+
+  .card-note {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: max-content;
+    padding: 15px 0;
+  }
+
+  .list-stars {
+    gap: 0.5rem;
+  }
+
+  .card-comment-container{
+    height: auto;
+  }
+
+  .cards-comment-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .card-comment {
+    max-height: none;
+    padding: 2.2rem 2rem;
+  }
+
+  .card-comment blockquote{
+    font-size: 1rem;
+    line-height: 20px;
+  }
+}
