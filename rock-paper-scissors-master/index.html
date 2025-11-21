@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | S</title>
+
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <main id="mainContent">
+    <div class="header">
+      <h1>
+        <img src="images/logo.svg" alt="">
+      </h1>
+      <div class="score">
+        <h2>SCORE</h2>
+        <span>12</span>
+      </div>
+    </div>
+    <div class="content">
+
+      <!-- <div class="left-side-results">
+        <h3>YOU PICKED</h3>
+        <button class="playable-option winner" id="" type="button"></button>
+      </div>
+      <div class="middle-side-results">
+        <h2>YOU LOSE</h2>
+        <button type="button" id="playAgain">PLAY AGAIN</button>
+      </div>
+      <div class="right-side-results">
+        <h3>THE HOUSE PICKED</h3>
+        <button class="playable-option selecting" id="" type="button"></button>
+      </div> -->
+
+      <div class="list-playable-options">
+        <div class="playable-options first-row">
+          <button type="button" class="playable-option" id="paper"></button>
+          <button type="button" class="playable-option" id="scissors"></button>
+        </div>
+        <div class="playable-options last-row">
+          <button type="button"  class="playable-option" id="rock"></button>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer">
+      <button type="button" id="rules">RULES</button>
+    </div>
+  </main>
+  
+  <div class="modal">
+    <div class="modal-header">
+      <h3>RULES</h3>
+      <button type="button" id="closeModal"></button>
+    </div>
+    <div class="modal-content">
+      <img src="images/image-rules.svg" alt="Rules">
+    </div>
+  </div>
+
+</body>
+
+</html>
