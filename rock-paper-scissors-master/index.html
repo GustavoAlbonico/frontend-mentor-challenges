@@ -4,13 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <title>Frontend Mentor | S</title>
+  <title>Rock Paper Scissors</title>
 
   <link rel="stylesheet" href="index.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -21,23 +24,25 @@
       </h1>
       <div class="score">
         <h2>SCORE</h2>
-        <span>12</span>
+        <span>0</span>
       </div>
     </div>
     <div class="content">
 
-      <!-- <div class="left-side-results">
-        <h3>YOU PICKED</h3>
-        <button class="playable-option winner" id="" type="button"></button>
+      <div class="results">
+        <div class="left-side">
+          <h3>YOU PICKED</h3>
+          <button class="playable-option" id="" type="button"></button>
+        </div>
+        <div class="middle-side">
+          <h2>YOU LOSE</h2>
+          <button type="button" id="playAgain">PLAY AGAIN</button>
+        </div>
+        <div class="right-side">
+          <h3>THE HOUSE PICKED</h3>
+          <button class="playable-option selecting" id="" type="button"></button>
+        </div>
       </div>
-      <div class="middle-side-results">
-        <h2>YOU LOSE</h2>
-        <button type="button" id="playAgain">PLAY AGAIN</button>
-      </div>
-      <div class="right-side-results">
-        <h3>THE HOUSE PICKED</h3>
-        <button class="playable-option selecting" id="" type="button"></button>
-      </div> -->
 
       <div class="list-playable-options">
         <div class="playable-options first-row">
@@ -45,7 +50,7 @@
           <button type="button" class="playable-option" id="scissors"></button>
         </div>
         <div class="playable-options last-row">
-          <button type="button"  class="playable-option" id="rock"></button>
+          <button type="button" class="playable-option" id="rock"></button>
         </div>
       </div>
 
@@ -54,7 +59,8 @@
       <button type="button" id="rules">RULES</button>
     </div>
   </main>
-  
+
+  <div id="overlay"></div>
   <div class="modal">
     <div class="modal-header">
       <h3>RULES</h3>
