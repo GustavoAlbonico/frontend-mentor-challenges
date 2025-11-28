@@ -106,8 +106,6 @@ body {
     min-height: 100vh;
     width: 100%;
 
-    overflow-x: auto;
-
     display: flex;
     align-items: center;
 
@@ -136,10 +134,9 @@ body {
         }
 
         .score {
-            width: 16%;
             min-height: 100%;
 
-            padding: 20px;
+            padding: 20px 30px;
 
             background-color: #fff;
             border-radius: 10px;
@@ -171,25 +168,25 @@ body {
         width: 100%;
 
         .list-playable-options {
-            --outline-size: clamp(1.8rem, 3.2vmin, 2.6rem);
+            --outline-size: clamp(0.8rem, 3.2vmin, 2.6rem);
 
             list-style: none;
             width: 100%;
 
             margin: 0 auto;
 
-            background: url("./images/bg-triangle.svg") no-repeat bottom;
-            background-size: 23%;
+            background: url("./images/bg-triangle.svg") no-repeat center;
+            background-size: clamp(26vh, 21%, 23%);
 
             .playable-options {
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: calc(5rem + var(--outline-size));
+                gap: calc(var(--outline-size) * 4);
 
                 &.last-row {
-                    margin-top: calc(5rem + var(--outline-size));
+                    margin-top: calc(var(--outline-size) * 3);
                 }
 
                 .playable-option {
@@ -206,7 +203,7 @@ body {
             all: unset;
             display: block;
 
-            min-width: clamp(120px, calc((10vw + 10vw) / 2), 400px);
+            min-width: clamp(60px, calc((10vw + 10vw) / 2), 400px);
 
             aspect-ratio: 1;
             border-radius: 50%;
@@ -238,7 +235,7 @@ body {
         }
 
         .results {
-            --outline-size: clamp(1.8rem, 4.5vmin, 100px);
+            --outline-size: clamp(1.1rem, 4.5vmin, 3rem);
 
             margin: 0 auto;
 
@@ -247,10 +244,10 @@ body {
             align-items: center;
             justify-content: center;
 
-            gap: 10rem;
+            gap: max(20vmin, 2rem);
 
             &:has(.winner) {
-                gap: 8rem;
+                gap: max(18vmin, 1.6rem);
             }
 
             .left-side,
@@ -264,6 +261,8 @@ body {
                     font-weight: 500;
                     text-align: center;
 
+                    text-wrap: nowrap;
+
                     color: #fff;
                 }
 
@@ -271,7 +270,7 @@ body {
                     position: relative;
 
                     margin: 0 auto;
-                    min-width: clamp(120px, calc((24vw + 24vh) / 2), 400px);
+                    min-width: clamp(80px, calc((14vw + 14vw) / 2), calc((24vw + 24vh) / 2));
                     outline: var(--outline-size) solid #000;
 
                     cursor: default;
@@ -286,10 +285,10 @@ body {
                         position: absolute;
                         z-index: -1;
 
-                        top: calc(clamp(1.8rem, 28.8vmin, 30rem) * -1);
-                        left: calc(clamp(1.8rem, 28.8vmin, 30rem) * -1);
+                        top: calc(clamp(80px, calc((12.8vw + 12.8vw) / 2), calc((24vw + 24vh) / 2)) * -1);
+                        left: calc(clamp(80px, calc((13.4vw + 13.4vw) / 2), calc((24vw + 24vh) / 2)) * -1);
 
-                        min-width: clamp(120px, 95vmin, 2000px);
+                        min-width: calc(clamp(80px, calc((13.5vw + 13.5vw) / 2), calc((24vw + 24vh) / 2)) * 3);
                         aspect-ratio: 1;
                         border-radius: 50%;
 
@@ -461,4 +460,179 @@ body {
             width: 90%;
         }
     }
+}
+
+@media (max-width: 1440px) {
+    #mainContent {
+
+        .header {
+            margin-top: 2.5rem;
+        }
+
+        .content {
+            margin-block: 3.4rem auto;
+
+            .results {
+
+                .left-side,
+                .right-side {
+
+                    h3 {
+                        margin-bottom: 4.5rem;
+
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .middle-side {
+                    h2 {
+                        font-size: 3rem;
+                    }
+
+                    #playAgain {
+                        padding-block: 0.9rem;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+        }
+
+        .footer {
+            margin-block: auto 1.5rem;
+
+            #rules {
+                font-size: 1rem;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1024px) {
+    #mainContent {
+
+        .header {
+            padding: 14px;
+
+            h1>img {
+                width: 130px;
+                object-fit: contain;
+            }
+
+            .score {
+
+                >h2 {
+                    font-size: 0.8rem;
+                }
+
+                >span {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        .content {
+            margin-block: 2.5rem auto;
+
+            .results {
+
+                .left-side,
+                .right-side {
+
+                    h3 {
+                        margin-bottom: 4rem;
+
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+        }
+
+        .footer #rules {
+            font-size: 0.8rem;
+            padding: 8px 35px;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    #mainContent {
+
+        .header {
+            width: 60%;
+            padding: 10px;
+
+            h1>img {
+                width: 100px;
+                object-fit: contain;
+            }
+
+            .score {
+
+                >h2 {
+                    font-size: 0.7rem;
+                }
+
+                >span {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 375px) {
+    #mainContent {
+
+        .header {
+            margin-top: 2.5rem;
+            width: 70%;
+            padding: 10px;
+
+            h1>img {
+                width: 80px;
+                object-fit: contain;
+            }
+
+            .score {
+                padding: 14px;
+
+                >h2 {
+                    font-size: 0.5rem;
+                }
+
+                >span {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        .content {
+            margin-block: 2.5rem auto;
+
+            .results {
+
+                .left-side,
+                .right-side {
+
+                    h3 {
+                        margin-bottom: 3rem;
+
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+        }
+
+        .footer #rules {
+            font-size: 0.7rem;
+            padding: 8px 30px;
+        }
+    }
+
 }
